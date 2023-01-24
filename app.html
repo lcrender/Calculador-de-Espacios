@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Espacio</title>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="calculadora">
+        <diV class="clearfix bgw">
+            <div id="nav_amb" class="texto"></div>
+            <div class="le w400 bor">
+                <div class="texto">Elementos disponibles en <span id="amb_tit">Living</span>:</div>
+                <div id="amb">
+                    <a href="" class="c0_0"><img style="vertical-align:middle;" src="img/lampara_piso.png" width="122" height="122"><span class="nom">Lámpara de piso</span> <span class="ob_v">0.33</span></a>
+                    <a href="" class="c0_1"><img src="img/mesa_tv.png" width="122" height="122"><span class="nom">Mesa de TV</span> <span class="ob_v">0.86</span></a>
+                    <a href="" class="c0_2"><img src="img/sillon_3cuerpos.png" width="122" height="122"><span class="nom">Sillón de 3 cuerpos</span> <span class="ob_v">1.37</span></a>
+                    <a href="" class="c0_3"><img src="img/sillon_2cuerpos.png" width="122" height="122"><span class="nom">Sillón de 2 cuerpos</span> <span class="ob_v">0.86</span></a>
+                    <a href="" class="c0_4"><img src="img/sillon_1cuerpo.png" width="122" height="122"><span class="nom">Sillón de 1 cuerpo</span> <span class="ob_v">0.73</span></a>
+                    <a href="" class="c0_5"><img src="img/mesa_baja.png" width="122" height="122"><span class="nom">Mesa baja</span> <span class="ob_v">0.44</span></a>
+                    <a href="" class="c0_6"><img src="img/biblioteca.png" width="122" height="122"><span class="nom">Biblioteca</span> <span class="ob_v">0.59</span></a>
+                </div>
+            </div>
+            <div class="le w400">
+                <div class="texto">Elementos seleccionados para guardar: <a href="" id="borrar"> <img src="img/delete.png"/> borrar selección</a></div>
+                <div id="car"></div>
+            </div>
+        </div>
+        <div>
+            <div class="espacio"><img src="img/calc.png" /></div>
+            <div class="textocalc">Espacio: <span id="esp">0</span> m<sup>2</sup> </div>
+            <div class="clearfix">
+                <div ID="TAM1"></div>				
+                <div ID="TAM2"></div>
+                <div ID="TAM3"></div>                </div>
+            </div>
+        </div>
+    <script src="/jquery.min.js"></script>
+    <script src="/functions.js"></script>
+    <script>
+    /*Objetos*/
+    var lampara_piso = ["Lámpara de piso","lampara_piso.png",0.33];
+    var mesa_tv = ["Mesa de TV","mesa_tv.png",0.86];
+    var sillon_3cuerpos =["Sillón de 3 cuerpos","sillon_3cuerpos.png",1.37];
+    var sillon_2cuerpos =["Sillón de 2 cuerpos","sillon_2cuerpos.png",0.86];
+    var sillon_1cuerpos =["Sillón de 1 cuerpo","sillon_1cuerpo.png",0.73];
+    var mesa_baja =["Mesa baja","mesa_baja.png",0.44];
+    var biblioteca = ["Biblioteca","biblioteca.png",0.59];
+    
+    var cama_1plaza = ["Cama 1 plaza","cama_1plaza.png",0.51];
+    var colchon_1plaza = ["Colchón 1 plaza","colchon_1plaza.png",0.34];
+    var cama_2plazas = ["Cama 2 plazas","cama_2plazas.png",0.86];
+    var colchon_2plazas = ["Colchón 2 plazas","colchon_2plazas.png",0.57];
+    var ropero = ["Ropero","ropero.png",1.68];
+    var comoda = ["Cómoda","comoda.png",0.86];
+    var mesa_luz = ["Mesa de luz","mesa_luz.png",0.12];
+    
+    var estanteria = ["Estantería","estanteria.png",0.78];
+    var cuna = ["Cuna","cuna.png",0.54];
+    var cochecito_bebe = ["Cochecito de bebé","cochecito_bebe.png",0.32];
+    var escritorio = ["Escritorio","escritorio.png",0.73];
+    
+    var mesa_comedor_8p = ["Mesa comedor 8 pers. o más","mesa_comedor_8p.png",0.95];
+    var mesa_comedor_6p = ["Mesa comedor 6 pers.","mesa_comedor_6p.png",0.63];
+    var silla = ["Silla","silla.png",0.18];
+    var banqueta = ["Banqueta","banqueta.png",0.16];
+    
+    var heladera = ["Heladera","heladera.png",0.71];
+    var freezer = ["Freezer","freezer.png",0.32];
+    var lavavajilla = ["Lavavajilla","lavavajilla.png",0.29];
+    var lavarropas = ["Lavarropas","lavarropas.png",0.34];
+    var cocina = ["Cocina","cocina.png",0.29];
+    var aire_acondicionado_compacto = ["Aire acondicionado compacto","aire_acondicionado_compacto.png",0.21];
+    var aire_acondicionado_split_2c = ["Aire acondicionado split 2 piezas","aire_acondicionado_split_2c.png",0.14];
+    var microondas = ["Microondas","microondas.png",0.10];
+    
+    var mesa_pool = ["Mesa de pool o metegol","mesa_pool.png",1.13];
+    var bicicleta = ["Bicicleta","bicicleta.png",0.68];
+    var palos_golf = ["Palos de golf","palos_golf.png",0.15];
+    var skate = ["Skate","skate.png",0.10];
+    var snow = ["Tabla de snowboard","snowboard.png",0.12];
+    var ski = ["Equipo de Ski","ski.png",0.12];
+    
+    var archivo = ["Archivo","archivo.png",0.43];
+    var cajonera = ["Cajonera","cajonera.png",1.20];
+    var escritorio_oficina = ["Escritorio","escritorio_oficina.png",0.59];
+    var silla_oficina = ["Silla de oficina","silla_oficina.png",0.20];
+    var perchero = ["Perchero","perchero.png",0.10];
+    
+    var caja_grande_50x50x75 = ["Caja grande 50x50x75","caja_grande_50x50x75.png",0.19];
+    var caja_mediana_50x50x50 = ["Caja mediana 50x50x50","caja_mediana_50x50x50.png",0.13];
+    var caja_chica_50x50x25 = ["Caja chica 50x50x25","caja_chica_50x50x25.png",0.06];
+    /*Ambientes*/
+    var ambientes = [
+        ["Living",
+        [lampara_piso,mesa_tv,sillon_3cuerpos,sillon_2cuerpos,sillon_1cuerpos,mesa_baja,biblioteca]
+        ],
+        ["Dormitorio principal",
+        [cama_1plaza,colchon_1plaza,cama_2plazas,colchon_2plazas,ropero,comoda,mesa_luz]
+        ],
+        ["Dormitorio secundario",
+        [cama_1plaza,colchon_1plaza,estanteria,cuna,cochecito_bebe,escritorio]
+        ],
+        ["Cocina y comedor",
+        [mesa_comedor_8p,mesa_comedor_6p,silla,banqueta]
+        ],
+        ["Línea blanca",
+        [heladera,freezer,lavavajilla,lavarropas,cocina,aire_acondicionado_compacto,aire_acondicionado_split_2c,microondas]
+        ],
+        ["Deportes",
+        [mesa_pool,bicicleta,palos_golf,skate,snow,ski]
+        ],
+        ["Oficina",
+        [archivo,cajonera,escritorio_oficina,silla_oficina,perchero]
+        ],
+        ["Cajas",
+        [caja_grande_50x50x75,caja_mediana_50x50x50,caja_chica_50x50x25]
+        ]
+    ]
+    </script>
+    <script>
+    var ca=[];
+    $(document).ready(function() {
+        depomax.calculadora.ini(3);  
+    });
+    </script>
+    <script src="/jquery-ui.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+#calculadora {text-align:center;margin: 0 auto;}
+.bgw {background-color:#fff}
+#car a, #amb a {
+float: left;
+width: 122px;
+height: 165px;
+margin: 0 10px 10px 0;
+border: 1px solid #CCCCCC;
+text-align: center;
+padding: 3px;
+text-decoration: none;
+font-size: 16px;
+background-color: #FFF;
+color: #000;
+}
+.texto, a#borrar {
+color: #000;
+}
+.clearfix {
+  overflow: auto;
+}
+.texto, .nom {
+font-family: 'Open Sans', Arial, sans-serif;
+font-size: 16px;
+margin-bottom:10px;
+}
+.textocalc{
+font-family: 'Open Sans', Arial, sans-serif;
+font-size: 24px;
+float:left;
+padding-top:15px;
+padding-left: 25px;
+padding-right: 25px;
+}
+#amb, #car {
+overflow: scroll;
+margin: 20px 0;
+}
+#calculadora .bor {
+padding: 10px 20px 10px 10px;
+}
+#calculadora .w400 {
+width: 47%;
+margin: 0 0 0 0px;
+padding: 10px;
+background-color: #FFFFFF;
+}
+#nav_amb {
+/*width: 950px;*/
+clear: both;
+margin-top: 20px;
+}
+#nav_amb a {
+background-color: #28A9E1;
+color: #FFFFFF;
+display: inline-block;
+padding: 7px 10px;
+margin: 0 10px 10px 0;
+text-decoration: none;
+width: auto;
+font-size: 13px;
+}
+#nav_amb a.cur {
+background-color: #000;
+}
+.le {
+float: left;
+width: auto;
+}
+.no {
+ float: none;
+}
+.ri {
+float: right;
+width: auto;
+}
+#espacio {
+text-align: left;
+font-size: 21px;
+padding: 10px;
+}
+.espacio{float:left;padding-top:4px;vertical-align:middle;padding-left: 30px;}
+#TAM1{background-image: url('/img/5m2.png');width:80px;height:70px;float:left;opacity:0.1;background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; -webkit-background-size: 100%;  -khtml-background-size: 100%;}
+#TAM2{background-image: url('/img/7m2.png');width:80px;height:70px;float:left;opacity:0.1;background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; -webkit-background-size: 100%;  -khtml-background-size: 100%;}
+#TAM3{background-image: url('/img/10m2.png');width:80px;height:70px;float:left;opacity:0.1;background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; -webkit-background-size: 100%;  -khtml-background-size: 100%;}
