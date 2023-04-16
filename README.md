@@ -1,3 +1,3 @@
 # Calculador de Espacios Javascript
 
-demo: [demo] (https://cityboxbarracas.com/calculador-de-espacio/)
+demo: https://cityboxbarracas.com/calculador-de-espacio/
